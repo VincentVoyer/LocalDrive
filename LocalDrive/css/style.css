@@ -1,0 +1,144 @@
+body{
+    margin : 0;
+    padding: 0;
+    font-family: sans-serif; 
+    background-color: whitesmoke;
+    font-size:300%;
+}
+
+nav{
+    font-size: .5em;
+    bottom: 0;
+}
+
+header{
+    background-color: lightgreen;
+    border-bottom: 4px solid whitesmoke;
+    color: white;
+    font-size: 2.5em;
+}
+
+footer{
+    text-align: center;
+    min-height: 150px;
+    color: white;
+    background-color: black;
+    border-top: 4px solid whitesmoke;
+}
+
+aside {
+    border: 1px solid lightgray;
+}
+
+section{	
+    
+    min-height: 300px;
+}
+
+.price{
+    background-color: lightgreen;
+    text-align: right;
+    padding: 0 10px;
+    height: 50px;
+    position:relative;
+}
+.price:before{
+    content:'';
+    display: block;
+    top:0; left:-50px;
+    width: 0;height: 0;
+    position: absolute;
+    border-bottom: 50px solid lightgreen;
+    border-left: 50px solid transparent;
+}
+
+.annotation{
+    font-size: 0.5em;
+}
+
+.miniDetail{
+    min-height: 375px;
+    margin: 2px;
+    
+    background-color: whitesmoke;
+    
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    box-shadow: 1px 1px 12px #555;
+    
+}
+
+.miniImg{
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.action{
+    height: 75px;
+    background: limegreen;
+    color: #000;
+    padding: 8px 8px 17px 8px;
+    
+    text-align: center;
+    text-decoration: none;
+    
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;    
+    border-radius: 3px 3px 3px 3px;
+    
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .15) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset;
+}
+
+.menu{
+    background: #3B3B3B;
+    color: rgb(247, 247, 247);
+    padding: 8px 8px 17px 8px;
+    margin: 0px 8px 17px 8px;
+    
+    
+    text-align: center;
+    text-decoration: none;
+    
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;    
+    border-radius: 3px 3px 3px 3px;
+    
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .15) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset;
+}
+
+
+@media screen and (min-device-width: 480px){
+    body{
+        margin : 0;
+        padding: 0;
+        font-family: sans-serif; 
+        background-color: whitesmoke;
+        font-size:100%;
+    }
+
+    .price{
+        height: 25px;
+    }
+    .price:before{
+        top:0; left:-25px;
+        border-bottom: 25px solid lightgreen;
+        border-left: 25px solid transparent;
+    }
+    
+    .miniImg{
+        height: 80%;
+        width: 80%;
+        min-height: 200px;
+    }
+    
+    .action{
+        height: 35px;
+    }
+}

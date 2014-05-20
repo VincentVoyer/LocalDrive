@@ -1,0 +1,65 @@
+/*--------------------------------------*/
+/*              Loader                  */
+/*--------------------------------------*/
+.loader{
+    width: 50px; height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    
+}
+/*--------------------------------------*/
+/*           Loader Double             */
+/*--------------------------------------*/
+.loader-double,.loader-double:after{
+    border-radius: 50px;
+    border: 6px solid transparent;
+    border-top-color: #000;
+    border-bottom-color: #000;
+    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+}
+
+.loader-double:after{
+    content: '';
+    position: absolute;
+    top: 5px; bottom: 5px; left: 5px; right: 5px;
+    width: 50px; height: 50px;
+    
+    animation: spinRevers 2s linear infinite;
+    -webkit-animation: spinRevers 2s linear infinite;
+    -moz-animation: spinRevers 2s linear infinite;
+}
+/*--------------------------------------*/
+/*            Animation                 */
+/*--------------------------------------*/
+@keyframes spin{
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin{
+    0%{ -webkit-transform: rotate(0deg); }
+    100%{ -webkit-transform: rotate(360deg); }
+}
+
+@-moz-keyframes spin{
+    0%{ -moz-transform: rotate(0deg); }
+    100%{ -moz-transform: rotate(360deg); }
+}
+
+@keyframes spinRevers{
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(-360deg); }
+}
+
+@-webkit-keyframes spinRevers{
+    0%{ -webkit-transform: rotate(0deg); }
+    100%{ -webkit-transform: rotate(-360deg); }
+}
+
+@-moz-keyframes spinRevers{
+    0%{ -moz-transform: rotate(0deg); }
+    100%{ -moz-transform: rotate(-360deg); }
+}

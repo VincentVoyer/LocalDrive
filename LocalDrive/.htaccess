@@ -1,3 +1,8 @@
-RewriteEngine on
+#DirectoryIndex index.php
+#Options -Indexes +FollowSymLinks -MultiViews
 
-RewriteRule ^([a-zA-Z\-\_\/]*)$ index.php?p=$1
+ 
+RewriteEngine on
+#RewriteBase /~vivoyer/
+
+RewriteRule ^([a-zA-Z0-9\-\_\/]*)$ index.php?p=$1 [L]

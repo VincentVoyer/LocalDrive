@@ -1,6 +1,7 @@
-<h2 class="col-s-12">
-    Produits les plus populaires :
-</h2>
+
+<a href="<?php echo WEBROOT; ?>Produit/add" class="col-s-12 action">
+    Ajouter un nouveau Produit
+</a>
 
 <?php 
     foreach($products as $product)
@@ -27,12 +28,9 @@
             <h4 class="col-s-4 col-s-push-8 price"><?php echo $product['price']; ?> €</h4>
         </div>
         
-        <div class="col-s-12">
-            <a href="<?php echo WEBROOT; ?>Commande/add/<?php echo $product['id'];?>" class="action col-s-12">Ajouter au panier</a>
-        </div>
-        
     </div>
 </div>
 <?php
     }
 ?>
+

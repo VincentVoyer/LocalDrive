@@ -5,6 +5,11 @@
     require(ROOT.'core/controller.php');
     require(ROOT.'controlers/Error.php');
     
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
+    
     $controller = 'Produit';
     $action = 'index';
     $mobile = false;
@@ -19,7 +24,7 @@
         }
     }
     
-    require('controlers/'.$controller.'.php');
+    require_once('controlers/'.$controller.'.php');
     $controller = new $controller();
     $controller->mobileDevice = $mobile;
     
@@ -30,6 +35,10 @@
         call_user_func_array(array($controller,$action),$params);
     }
     else{
+        sendError();
+    }
+    
+    function sendError(){
         $errorManager = new Error();
         $errorManager->show(404);
     }

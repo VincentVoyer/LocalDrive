@@ -1,5 +1,6 @@
 <?php
-class Commercants extends Membre{
+class Commercants extends Membres{
+    public $tableSelect = 'AllCommercants';
      public $table = 'Membres';
 }
 ?>

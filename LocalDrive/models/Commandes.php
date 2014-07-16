@@ -1,8 +1,9 @@
 <?php
 class Commandes extends Model{
+    public $tableSelect = 'AllCommandes';
     public $table = 'Commandes';
 
-    function getContent($id){
+    function getCommande(){
         
     }
 }

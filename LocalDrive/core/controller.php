@@ -39,8 +39,7 @@ class Controller{
     
     function loadModel($name)
     {
-        require_once(ROOT.'models/'.$name.'.php');
-        
+        require(ROOT.'models/'.$name.'.php');
         $this->$name = new $name();
     }
 }
